@@ -23,6 +23,7 @@ requirements:
     - pkg-config
   host:
     - python
+    - setuptools
     - pip
     - zstd
   run:
