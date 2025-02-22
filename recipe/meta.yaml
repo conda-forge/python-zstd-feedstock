@@ -26,6 +26,7 @@ requirements:
   host:
     - python
     - setuptools
+    - pkg-config
     - pip
     - zstd
   run:
