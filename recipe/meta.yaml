@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.org/packages/source/z/zstd/zstd-{{ version }}.tar.gz
   sha256: f8adbf9813bf24b4faa6a15854137addec14c7166bc15491e3827ec88f3048bb
+  patches:
+    - setup.patch
 
 build:
   number: 0
@@ -26,7 +28,6 @@ requirements:
   host:
     - python
     - setuptools
-    - pkg-config
     - pip
     - zstd
   run:
