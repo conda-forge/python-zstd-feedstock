@@ -29,7 +29,7 @@ requirements:
     - python
     - setuptools
     - pip
-    - zstd
+    - zstd =${{ (version | split('.'))[:-1] | join('.') }}
   run:
     - python
 
