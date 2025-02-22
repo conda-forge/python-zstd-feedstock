@@ -16,7 +16,7 @@ index 0959b178a..cd88a5ead 100644
      sys.argv.remove("--external")
  
 -pkgconf = "/usr/bin/pkg-config"
-+pkgconf = os.path.join(os.environ["BUILD_PREFIX"], "bin", "pkg-config")
++pkgconf = os.path.join(os.environ["BUILD_PREFIX"], "bin", "pkg-config") if os.name != 'nt' else os.path.join(os.environ["BUILD_PREFIX"], "Library", "bin", "pkg-config.exe")
  if "--libzstd-bundled" in sys.argv:
      # Do you want use external Zstd library?
      SUP_EXTERNAL=False
