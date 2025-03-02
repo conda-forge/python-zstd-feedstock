@@ -16,7 +16,7 @@ index aca39514f..2ed8a6278 100644
      paths = ["/usr/local/bin", "/usr/local/sbin", "/bin", "/sbin", "/usr/bin", "/usr/sbin"]
      if "PATH" in os.environ:
 -        paths = os.environ["PATH"].split(":")
-+        paths = os.environ["PATH"].split(";")
++        paths = [os.path.join(os.environ["BUILD_PREFIX"], "Library", "bin")]
      for p in paths:
          full_path = os.path.join(p, bin_exe)
          if os.path.isfile(full_path) and os.access(full_path, os.X_OK):
