@@ -1,0 +1,22 @@
+From 5033b2c466817b5a08bf45595c05abd12f4e8fd7 Mon Sep 17 00:00:00 2001
+From: Jan Janssen <jan-janssen@users.noreply.github.com>
+Date: Sun, 2 Mar 2025 19:26:05 +0100
+Subject: [PATCH] Update setup.py
+
+---
+ setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index aca39514f..2ed8a6278 100644
+--- a/setup.py
++++ b/setup.py
+@@ -30,7 +30,7 @@ def which(bin_exe):
+     # support Linux / POSIX here? Or maybe windows?
+     paths = ["/usr/local/bin", "/usr/local/sbin", "/bin", "/sbin", "/usr/bin", "/usr/sbin"]
+     if "PATH" in os.environ:
+-        paths = os.environ["PATH"].split(":")
++        paths = os.environ["PATH"].split(";")
+     for p in paths:
+         full_path = os.path.join(p, bin_exe)
+         if os.path.isfile(full_path) and os.access(full_path, os.X_OK):
