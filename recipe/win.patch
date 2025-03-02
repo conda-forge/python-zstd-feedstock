@@ -1,0 +1,30 @@
+From a0a3e87764abf2230c972716324514574918f7c4 Mon Sep 17 00:00:00 2001
+From: Jan Janssen <jan-janssen@users.noreply.github.com>
+Date: Sun, 2 Mar 2025 20:04:44 +0100
+Subject: [PATCH] Update setup.py
+
+---
+ setup.py | 10 ++--------
+ 1 file changed, 2 insertions(+), 8 deletions(-)
+
+diff --git a/setup.py b/setup.py
+index aca39514f..ad0bc130a 100644
+--- a/setup.py
++++ b/setup.py
+@@ -28,14 +28,8 @@ def which(bin_exe):
+     @rtype: str|bool
+     """
+     # support Linux / POSIX here? Or maybe windows?
+-    paths = ["/usr/local/bin", "/usr/local/sbin", "/bin", "/sbin", "/usr/bin", "/usr/sbin"]
+-    if "PATH" in os.environ:
+-        paths = os.environ["PATH"].split(":")
+-    for p in paths:
+-        full_path = os.path.join(p, bin_exe)
+-        if os.path.isfile(full_path) and os.access(full_path, os.X_OK):
+-            return full_path
+-    return False
++    return os.path.join(os.environ["BUILD_PREFIX"], "Library", "bin", "pkg-config.exe")
++
+ ###
+ # Ugly hacks, I know
+ #
