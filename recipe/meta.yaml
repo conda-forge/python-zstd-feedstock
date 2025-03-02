@@ -9,6 +9,8 @@ package:
 source:
   url: https://pypi.org/packages/source/z/zstd/zstd-{{ version }}.tar.gz
   sha256: 86e0dae4a67f53fe8ea99fca7ed3218103ef2a2ddb27e9bdb4851a117ff56412
+  patches:
+    - win.patch  # [win]
 
 build:
   number: 0
