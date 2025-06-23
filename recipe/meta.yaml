@@ -1,5 +1,5 @@
 {% set name = "python-zstd" %}
-{% set version = "1.5.7.1" %}
+{% set version = "1.5.7.2" %}
 {% set zstd_version = '.'.join(version.split('.')[:-1]) %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/z/zstd/zstd-{{ version }}.tar.gz
-  sha256: 1a8550e35a68e7530935715342dab3bb903705e9e91d87ef8845694b7bbb866f
+  sha256: 6d8684c69009be49e1b18ec251a5eb0d7e24f93624990a8a124a1da66a92fc8a
   patches:
     - win.patch  # [win]
 
