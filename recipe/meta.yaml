@@ -13,7 +13,7 @@ source:
     - win.patch  # [win]
 
 build:
-  number: 0
+  number: 1
   script:
     - export ZSTD_EXTERNAL=1  # [not win]
     - set ZSTD_EXTERNAL=1  # [win]
