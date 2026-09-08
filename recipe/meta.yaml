@@ -7,13 +7,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/z/zstd/zstd-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/z/zstd/zstd-{{ version }}.tar.gz
   sha256: 403e5205f4ac04b92e6b0cda654be2f51de268228a0db0067bc087faacf2f495
   patches:
     - win.patch  # [win]
 
 build:
-  number: 0
+  number: 1
   script:
     - export ZSTD_EXTERNAL=1  # [not win]
     - set ZSTD_EXTERNAL=1  # [win]
