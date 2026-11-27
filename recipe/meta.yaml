@@ -13,7 +13,7 @@ source:
     - win.patch  # [win]
 
 build:
-  number: 2
+  number: 3
   script:
     - export ZSTD_EXTERNAL=1  # [not win]
     - set ZSTD_EXTERNAL=1  # [win]
@@ -25,7 +25,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
-    - pkg-config
+    - pkgconf
   host:
     - python
     - setuptools
